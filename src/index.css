@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-headline: "Plus Jakarta Sans", "Noto Sans SC", sans-serif;
+  --font-body: "Be Vietnam Pro", "Noto Sans SC", sans-serif;
+  --font-label: "Plus Jakarta Sans", "Noto Sans SC", sans-serif;
+
+  --color-on-background: #171d1b;
+  --color-on-primary: #ffffff;
+  --color-outline: #6d7a72;
+  --color-on-tertiary-fixed: #001f24;
+  --color-tertiary-fixed: #c3e9f1;
+  --color-tertiary: #40646b;
+  --color-error: #ba1a1a;
+  --color-inverse-on-surface: #edf2ef;
+  --color-primary-fixed: #86f8c8;
+  --color-surface-variant: #dee4e1;
+  --color-surface-container-low: #f0f5f2;
+  --color-on-secondary-fixed-variant: #004b74;
+  --color-on-secondary-fixed: #001d32;
+  --color-surface-bright: #f5faf7;
+  --color-background: #f5faf7;
+  --color-on-tertiary-fixed-variant: #284c53;
+  --color-on-error-container: #93000a;
+  --color-secondary-fixed-dim: #94ccff;
+  --color-tertiary-fixed-dim: #a8cdd5;
+  --color-primary: #006c4d;
+  --color-secondary-container: #67bafd;
+  --color-on-tertiary-container: #173c43;
+  --color-outline-variant: #bccac1;
+  --color-on-secondary-container: #004972;
+  --color-on-surface-variant: #3d4943;
+  --color-on-primary-fixed-variant: #005139;
+  --color-surface-container-high: #e4e9e6;
+  --color-secondary-fixed: #cde5ff;
+  --color-primary-container: #3eb489;
+  --color-on-surface: #171d1b;
+  --color-tertiary-container: #82a7ae;
+  --color-on-tertiary: #ffffff;
+  --color-secondary: #006399;
+  --color-on-primary-container: #00402d;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-dim: #d6dbd8;
+  --color-inverse-primary: #69dbad;
+  --color-inverse-surface: #2c3230;
+  --color-error-container: #ffdad6;
+  --color-surface-tint: #006c4d;
+  --color-primary-fixed-dim: #69dbad;
+  --color-on-error: #ffffff;
+  --color-surface-container-highest: #dee4e1;
+  --color-on-secondary: #ffffff;
+  --color-on-primary-fixed: #002115;
+  --color-surface: #f5faf7;
+  --color-surface-container: #eaefec;
+
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-on-surface font-body;
+  }
+}
+
+@utility vitality-gradient {
+  background: linear-gradient(135deg, #006c4d 0%, #3eb489 100%);
+}
+
+@utility glass-panel {
+  background: rgba(245, 250, 247, 0.8);
+  backdrop-filter: blur(24px);
+}
+
+@keyframes wave {
+  0% { transform: translateX(-50%) skewX(0deg); }
+  50% { transform: translateX(-25%) skewX(10deg); }
+  100% { transform: translateX(-50%) skewX(0deg); }
+}
+
+@utility animate-wave {
+  animation: wave 4s ease-in-out infinite;
+}
